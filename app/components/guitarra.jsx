@@ -1,7 +1,7 @@
 import { Link } from "@remix-run/react";
 export default function Guitarra({guitarra}) {
 
-    const { descripcion, imagen, precio, uid, nombre } = guitarra
+    const { descripcion, imagen, precio, url, nombre } = guitarra
     // console.log(imagen.data.attributes.formats.medium.url);
   return (
     <div className="guitarra">            
@@ -11,7 +11,7 @@ export default function Guitarra({guitarra}) {
             <p className="descripcion">{descripcion}</p>
             <p className="precio">${precio}</p>
 
-            <Link className="enlace" to={`/guitarras/${uid}`}>Ver Producto</Link>
+            <Link className="enlace" to={`/guitarras/${url}`}>Ver Producto</Link>
         </div>
     </div>
   )
